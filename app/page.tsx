@@ -48,7 +48,7 @@ export default function Home() {
           </nav>
         </div>
 
-        {/* Social Links */}
+        {/* Social Links - Update these URLs with your actual profiles */}
         <div className="flex gap-4 mt-8">
           <a
             href="https://github.com"
