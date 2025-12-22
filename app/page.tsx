@@ -1,17 +1,107 @@
+"use client";
+
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [displayedText, setDisplayedText] = useState("");
+  const [titleIndex, setTitleIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [activeSection, setActiveSection] = useState("about");
+
+  const titles = [
+    "Full-Stack Developer",
+    "Software Engineer",
+    "Turning Coffee into Code ☕",
+    "Turning Ideas into Solutions"
+  ];
+
+  useEffect(() => {
+    const currentTitle = titles[titleIndex];
+    const typingSpeed = isDeleting ? 50 : 100;
+    const pauseDuration = isDeleting ? 500 : 2000;
+
+    const timer = setTimeout(() => {
+      if (!isDeleting) {
+        // Typing
+        if (displayedText.length < currentTitle.length) {
+          setDisplayedText(currentTitle.substring(0, displayedText.length + 1));
+        } else {
+          // Finished typing, pause then start deleting
+          setTimeout(() => setIsDeleting(true), pauseDuration);
+        }
+      } else {
+        // Deleting
+        if (displayedText.length > 0) {
+          setDisplayedText(currentTitle.substring(0, displayedText.length - 1));
+        } else {
+          // Finished deleting, move to next title
+          setIsDeleting(false);
+          setTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
+        }
+      }
+    }, typingSpeed);
+
+    return () => clearTimeout(timer);
+  }, [displayedText, titleIndex, isDeleting]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["about", "experience", "skills", "projects", "education", "achievements"];
+      const scrollPosition = window.scrollY + window.innerHeight / 3;
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Check initial position
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const spotlight = document.getElementById('spotlight');
+      if (spotlight) {
+        spotlight.style.background = `radial-gradient(800px circle at ${e.clientX}px ${e.clientY}px, rgba(96, 165, 250, 0.12), transparent 60%)`;
+      }
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
   return (
-    <div className="flex min-h-screen bg-slate-900">
+    <div className="flex min-h-screen bg-slate-900 relative">
+      {/* Spotlight Effect */}
+      <div 
+        id="spotlight"
+        className="pointer-events-none fixed inset-0 z-30 transition-all duration-300"
+        style={{ background: 'transparent' }}
+      ></div>
+      
       {/* Left Section - Fixed */}
-      <aside className="w-full lg:w-1/2 lg:fixed lg:h-screen flex flex-col justify-between p-8 lg:p-16 bg-slate-900">
+      <aside className="w-full lg:w-[45%] lg:fixed lg:h-screen flex flex-col justify-between p-12 lg:pl-32 lg:pr-20 lg:py-24">
         <div className="space-y-6">
           <div>
             <h1 className="text-4xl lg:text-5xl font-bold text-slate-100 mb-2">
               Ranveer Deshmukh
             </h1>
-            <h2 className="text-xl lg:text-2xl font-medium text-slate-300 mb-4">
-              Full Stack Developer
+            <h2 className="text-xl lg:text-2xl font-medium text-slate-300 mb-4 min-h-[2.5rem]">
+              {displayedText}
+              <span className="animate-pulse">|</span>
             </h2>
             <p className="text-base text-slate-400 max-w-md">
               I build exceptional digital experiences with modern web technologies.
@@ -20,30 +110,96 @@ export default function Home() {
           </div>
 
           {/* Navigation Links */}
-          <nav className="hidden lg:block space-y-2 mt-12">
+          <nav className="hidden lg:block space-y-1 mt-12">
+            <a
+              href="#about"
+              className="group flex items-center py-3 transition-all duration-200"
+            >
+              <span 
+                className={`h-px bg-slate-400 transition-all duration-200 mr-4 ${
+                  activeSection === "about" ? "w-16 bg-slate-100" : "w-8 group-hover:w-16 group-hover:bg-slate-100"
+                }`}
+              ></span>
+              <span className={`text-xs font-bold uppercase tracking-widest transition-colors duration-200 ${
+                activeSection === "about" ? "text-slate-100" : "text-slate-500 group-hover:text-slate-100"
+              }`}>
+                About
+              </span>
+            </a>
             <a
               href="#experience"
-              className="block text-slate-400 hover:text-slate-100 transition-colors py-2"
+              className="group flex items-center py-3 transition-all duration-200"
             >
-              Experience
+              <span 
+                className={`h-px bg-slate-400 transition-all duration-200 mr-4 ${
+                  activeSection === "experience" ? "w-16 bg-slate-100" : "w-8 group-hover:w-16 group-hover:bg-slate-100"
+                }`}
+              ></span>
+              <span className={`text-xs font-bold uppercase tracking-widest transition-colors duration-200 ${
+                activeSection === "experience" ? "text-slate-100" : "text-slate-500 group-hover:text-slate-100"
+              }`}>
+                Experience
+              </span>
             </a>
             <a
               href="#skills"
-              className="block text-slate-400 hover:text-slate-100 transition-colors py-2"
+              className="group flex items-center py-3 transition-all duration-200"
             >
-              Skills
+              <span 
+                className={`h-px bg-slate-400 transition-all duration-200 mr-4 ${
+                  activeSection === "skills" ? "w-16 bg-slate-100" : "w-8 group-hover:w-16 group-hover:bg-slate-100"
+                }`}
+              ></span>
+              <span className={`text-xs font-bold uppercase tracking-widest transition-colors duration-200 ${
+                activeSection === "skills" ? "text-slate-100" : "text-slate-500 group-hover:text-slate-100"
+              }`}>
+                Skills
+              </span>
             </a>
             <a
               href="#projects"
-              className="block text-slate-400 hover:text-slate-100 transition-colors py-2"
+              className="group flex items-center py-3 transition-all duration-200"
             >
-              Projects
+              <span 
+                className={`h-px bg-slate-400 transition-all duration-200 mr-4 ${
+                  activeSection === "projects" ? "w-16 bg-slate-100" : "w-8 group-hover:w-16 group-hover:bg-slate-100"
+                }`}
+              ></span>
+              <span className={`text-xs font-bold uppercase tracking-widest transition-colors duration-200 ${
+                activeSection === "projects" ? "text-slate-100" : "text-slate-500 group-hover:text-slate-100"
+              }`}>
+                Projects
+              </span>
+            </a>
+            <a
+              href="#education"
+              className="group flex items-center py-3 transition-all duration-200"
+            >
+              <span 
+                className={`h-px bg-slate-400 transition-all duration-200 mr-4 ${
+                  activeSection === "education" ? "w-16 bg-slate-100" : "w-8 group-hover:w-16 group-hover:bg-slate-100"
+                }`}
+              ></span>
+              <span className={`text-xs font-bold uppercase tracking-widest transition-colors duration-200 ${
+                activeSection === "education" ? "text-slate-100" : "text-slate-500 group-hover:text-slate-100"
+              }`}>
+                Education
+              </span>
             </a>
             <a
               href="#achievements"
-              className="block text-slate-400 hover:text-slate-100 transition-colors py-2"
+              className="group flex items-center py-3 transition-all duration-200"
             >
-              Achievements
+              <span 
+                className={`h-px bg-slate-400 transition-all duration-200 mr-4 ${
+                  activeSection === "achievements" ? "w-16 bg-slate-100" : "w-8 group-hover:w-16 group-hover:bg-slate-100"
+                }`}
+              ></span>
+              <span className={`text-xs font-bold uppercase tracking-widest transition-colors duration-200 ${
+                activeSection === "achievements" ? "text-slate-100" : "text-slate-500 group-hover:text-slate-100"
+              }`}>
+                Achievements
+              </span>
             </a>
           </nav>
         </div>
@@ -88,7 +244,30 @@ export default function Home() {
       </aside>
 
       {/* Right Section - Scrollable */}
-      <main className="w-full lg:w-1/2 lg:ml-[50%] p-8 lg:p-16 space-y-24">
+      <main className="w-full lg:w-[55%] lg:ml-[45%] p-12 lg:pl-20 lg:pr-40 lg:py-24 space-y-24">
+        {/* About Section */}
+        <section id="about" className="scroll-mt-16">
+          <h2 className="text-2xl font-bold text-slate-100 mb-6">
+            About
+          </h2>
+          <div className="space-y-4 text-slate-400">
+            <p>
+              I'm a passionate full-stack developer with a love for creating exceptional digital experiences. 
+              My journey in software development started with a curiosity about how things work, 
+              and has evolved into a career focused on building scalable, user-centric applications.
+            </p>
+            <p>
+              I specialize in modern web technologies and enjoy working on projects that challenge me 
+              to learn and grow. Whether it's crafting intuitive user interfaces or architecting robust 
+              backend systems, I bring dedication and attention to detail to every project.
+            </p>
+            <p>
+              When I'm not coding, you'll find me exploring new technologies, contributing to open-source 
+              projects, or sharing knowledge with the developer community.
+            </p>
+          </div>
+        </section>
+
         {/* Experience Section */}
         <section id="experience" className="scroll-mt-16">
           <h2 className="text-2xl font-bold text-slate-100 mb-6">
@@ -260,6 +439,45 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Education Section */}
+        <section id="education" className="scroll-mt-16">
+          <h2 className="text-2xl font-bold text-slate-100 mb-6">
+            Education
+          </h2>
+          <div className="space-y-8">
+            <div className="group">
+              <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-2">
+                <h3 className="text-lg font-semibold text-slate-100 group-hover:text-blue-400 transition-colors">
+                  Bachelor of Science in Computer Science
+                </h3>
+                <span className="text-sm text-slate-400">
+                  2016 - 2020
+                </span>
+              </div>
+              <p className="text-slate-400 mb-2">
+                University Name
+              </p>
+              <p className="text-slate-400">
+                Focused on software engineering, algorithms, and data structures. 
+                Completed capstone project on machine learning applications.
+              </p>
+            </div>
+
+            <div className="group">
+              <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-2">
+                <h3 className="text-lg font-semibold text-slate-100 group-hover:text-blue-400 transition-colors">
+                  Relevant Certifications
+                </h3>
+              </div>
+              <ul className="text-slate-400 space-y-2">
+                <li>• AWS Certified Developer - Associate</li>
+                <li>• Professional Scrum Master (PSM I)</li>
+                <li>• MongoDB Certified Developer</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
         {/* Achievements Section */}
         <section id="achievements" className="scroll-mt-16 pb-16">
           <h2 className="text-2xl font-bold text-slate-100 mb-6">
@@ -315,6 +533,13 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Footer */}
+        <footer className="pb-16 text-center">
+          <p className="text-sm text-slate-500">
+            © Ranveer Deshmukh 2025
+          </p>
+        </footer>
       </main>
     </div>
   );
