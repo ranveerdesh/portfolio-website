@@ -390,14 +390,14 @@ export default function Home() {
           <div className="space-y-6 sm:space-y-8">
             {/* Frontend Development */}
             <div>
-              <h3 className="text-lg font-semibold text-slate-100 mb-3">
+              <h3 className="text-base sm:text-lg font-semibold text-slate-100 mb-3">
                 Frontend Development
               </h3>
               <div className="flex flex-wrap gap-2">
                 {["JavaScript (ES6+)", "TypeScript", "React", "Next.js", "HTML5", "CSS3", "Tailwind CSS", "Responsive Design", "Component-Based Architecture"].map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-sm"
+                    className="px-2 sm:px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs sm:text-sm"
                   >
                     {skill}
                   </span>
@@ -407,14 +407,14 @@ export default function Home() {
 
             {/* Backend Development */}
             <div>
-              <h3 className="text-lg font-semibold text-slate-100 mb-3">
+              <h3 className="text-base sm:text-lg font-semibold text-slate-100 mb-3">
                 Backend Development
               </h3>
               <div className="flex flex-wrap gap-2">
                 {["Node.js", "Express.js", "RESTful APIs", "Authentication & Authorization", "API Design", "Middleware", "Server-side Rendering"].map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 bg-green-900/30 text-green-300 rounded-full text-sm"
+                    className="px-2 sm:px-3 py-1 bg-green-900/30 text-green-300 rounded-full text-xs sm:text-sm"
                   >
                     {skill}
                   </span>
@@ -424,14 +424,14 @@ export default function Home() {
 
             {/* Database & Data Management */}
             <div>
-              <h3 className="text-lg font-semibold text-slate-100 mb-3">
+              <h3 className="text-base sm:text-lg font-semibold text-slate-100 mb-3">
                 Database & Data Management
               </h3>
               <div className="flex flex-wrap gap-2">
                 {["MongoDB", "PostgreSQL", "SQL", "Schema Design", "CRUD Operations", "Data Validation"].map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 bg-teal-900/30 text-teal-300 rounded-full text-sm"
+                    className="px-2 sm:px-3 py-1 bg-teal-900/30 text-teal-300 rounded-full text-xs sm:text-sm"
                   >
                     {skill}
                   </span>
@@ -441,14 +441,14 @@ export default function Home() {
 
             {/* Cloud & DevOps */}
             <div>
-              <h3 className="text-lg font-semibold text-slate-100 mb-3">
+              <h3 className="text-base sm:text-lg font-semibold text-slate-100 mb-3">
                 Cloud & DevOps
               </h3>
               <div className="flex flex-wrap gap-2">
                 {["AWS (EC2, S3)", "Docker", "CI/CD", "GitHub Actions", "Cloud Deployment", "Environment Configuration", "Linux"].map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-sm"
+                    className="px-2 sm:px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-xs sm:text-sm"
                   >
                     {skill}
                   </span>
@@ -458,14 +458,14 @@ export default function Home() {
 
             {/* Testing & Quality Assurance */}
             <div>
-              <h3 className="text-lg font-semibold text-slate-100 mb-3">
+              <h3 className="text-base sm:text-lg font-semibold text-slate-100 mb-3">
                 Testing & Quality Assurance
               </h3>
               <div className="flex flex-wrap gap-2">
                 {["Unit Testing", "Integration Testing", "Jest", "Playwright", "Cypress", "Debugging", "Code Reviews"].map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 bg-cyan-900/30 text-cyan-300 rounded-full text-sm"
+                    className="px-2 sm:px-3 py-1 bg-cyan-900/30 text-cyan-300 rounded-full text-xs sm:text-sm"
                   >
                     {skill}
                   </span>
@@ -475,14 +475,14 @@ export default function Home() {
 
             {/* Development Tools */}
             <div>
-              <h3 className="text-lg font-semibold text-slate-100 mb-3">
+              <h3 className="text-base sm:text-lg font-semibold text-slate-100 mb-3">
                 Development Tools
               </h3>
               <div className="flex flex-wrap gap-2">
                 {["Git", "GitHub", "VS Code", "npm", "yarn", "ESLint", "Prettier"].map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 bg-indigo-900/30 text-indigo-300 rounded-full text-sm"
+                    className="px-2 sm:px-3 py-1 bg-indigo-900/30 text-indigo-300 rounded-full text-xs sm:text-sm"
                   >
                     {skill}
                   </span>
@@ -492,14 +492,14 @@ export default function Home() {
 
             {/* Data Analytics & AI */}
             <div>
-              <h3 className="text-lg font-semibold text-slate-100 mb-3">
+              <h3 className="text-base sm:text-lg font-semibold text-slate-100 mb-3">
                 Data Analytics & AI
               </h3>
               <div className="flex flex-wrap gap-2">
                 {["Python", "Pandas", "Data Cleaning & Transformation", "CSV / Excel Processing", "Dash", "OCR Integration", "AI-Assisted Data Pipelines"].map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 bg-amber-900/30 text-amber-300 rounded-full text-sm"
+                    className="px-2 sm:px-3 py-1 bg-amber-900/30 text-amber-300 rounded-full text-xs sm:text-sm"
                   >
                     {skill}
                   </span>
@@ -509,14 +509,14 @@ export default function Home() {
 
             {/* Project Management */}
             <div>
-              <h3 className="text-lg font-semibold text-slate-100 mb-3">
+              <h3 className="text-base sm:text-lg font-semibold text-slate-100 mb-3">
                 Project Management
               </h3>
               <div className="flex flex-wrap gap-2">
                 {["Agile / Scrum", "Jira", "Trello"].map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 bg-pink-900/30 text-pink-300 rounded-full text-sm"
+                    className="px-2 sm:px-3 py-1 bg-pink-900/30 text-pink-300 rounded-full text-xs sm:text-sm"
                   >
                     {skill}
                   </span>
