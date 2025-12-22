@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -84,28 +84,27 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex min-h-screen bg-slate-900 relative">
+    <div className="flex flex-col lg:flex-row min-h-screen bg-slate-900 relative">
       {/* Spotlight Effect */}
       <div 
         id="spotlight"
-        className="pointer-events-none fixed inset-0 z-30 transition-all duration-300"
+        className="pointer-events-none fixed inset-0 z-30 transition-all duration-300 hidden lg:block"
         style={{ background: 'transparent' }}
       ></div>
       
-      {/* Left Section - Fixed */}
-      <aside className="w-full lg:w-[45%] lg:fixed lg:h-screen flex flex-col justify-between p-12 lg:pl-32 lg:pr-20 lg:py-24">
+      {/* Left Section - Fixed on desktop, scrollable on mobile */}
+      <aside className="w-full lg:w-[45%] lg:fixed lg:h-screen flex flex-col justify-between p-8 sm:p-12 lg:pl-32 lg:pr-20 lg:py-24">
         <div className="space-y-6">
           <div>
-            <h1 className="text-4xl lg:text-5xl font-bold text-slate-100 mb-2">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-100 mb-2">
               Ranveer Deshmukh
             </h1>
-            <h2 className="text-xl lg:text-2xl font-medium text-slate-300 mb-4 min-h-[2.5rem]">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-medium text-slate-300 mb-4 min-h-[2rem] sm:min-h-[2.5rem]">
               {displayedText}
               <span className="animate-pulse">|</span>
             </h2>
-            <p className="text-base text-slate-400 max-w-md">
-              I build exceptional digital experiences with modern web technologies.
-              Passionate about creating user-friendly and performant applications.
+            <p className="text-sm sm:text-base text-slate-400 max-w-md">
+              I build full-stack software and enjoy turning ideas into products people can actually use and experience.
             </p>
           </div>
 
@@ -207,7 +206,7 @@ export default function Home() {
         {/* Social Links - Update these URLs with your actual profiles */}
         <div className="flex gap-4 mt-8">
           <a
-            href="https://github.com"
+            href="https://github.com/ranveerdesh"
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-400 hover:text-slate-100 transition-colors"
@@ -216,7 +215,7 @@ export default function Home() {
             <Github className="w-6 h-6" />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/ranveer-deshmukh-64b356206/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-400 hover:text-slate-100 transition-colors"
@@ -225,16 +224,7 @@ export default function Home() {
             <Linkedin className="w-6 h-6" />
           </a>
           <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-slate-400 hover:text-slate-100 transition-colors"
-            aria-label="Twitter"
-          >
-            <Twitter className="w-6 h-6" />
-          </a>
-          <a
-            href="mailto:contact@example.com"
+            href="mailto:ranveerdesh575@gmail.com"
             className="text-slate-400 hover:text-slate-100 transition-colors"
             aria-label="Email"
           >
@@ -244,58 +234,61 @@ export default function Home() {
       </aside>
 
       {/* Right Section - Scrollable */}
-      <main className="w-full lg:w-[55%] lg:ml-[45%] p-12 lg:pl-20 lg:pr-40 lg:py-24 space-y-24">
+      <main className="w-full lg:w-[55%] lg:ml-[45%] p-8 sm:p-12 lg:pl-20 lg:pr-40 lg:py-24 space-y-16 sm:space-y-20 lg:space-y-24">
         {/* About Section */}
-        <section id="about" className="scroll-mt-16">
-          <h2 className="text-2xl font-bold text-slate-100 mb-6">
+        <section id="about" className="scroll-mt-16 sm:scroll-mt-20">
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-100 mb-4 sm:mb-6">
             About
           </h2>
-          <div className="space-y-4 text-slate-400">
+          <div className="space-y-4 text-slate-400 text-sm sm:text-base">
             <p>
-              I'm a passionate full-stack developer with a love for creating exceptional digital experiences. 
-              My journey in software development started with a curiosity about how things work, 
-              and has evolved into a career focused on building scalable, user-centric applications.
+              I'm a Computer Science graduate specialising in Cyber Security, with experience building full-stack applications, data-driven systems, and analytics tools. I enjoy working across the stack, from crafting clean user interfaces to developing reliable backend services, APIs, and data pipelines that support real-world use cases.
             </p>
             <p>
-              I specialize in modern web technologies and enjoy working on projects that challenge me 
-              to learn and grow. Whether it's crafting intuitive user interfaces or architecting robust 
-              backend systems, I bring dedication and attention to detail to every project.
-            </p>
-            <p>
-              When I'm not coding, you'll find me exploring new technologies, contributing to open-source 
-              projects, or sharing knowledge with the developer community.
+              I've worked as a Software Engineer Intern and Freelance Full-Stack Developer, contributing to projects involving cloud deployment, databases, and AI-assisted data processing. Outside of tech, I enjoy filmmaking and visual storytelling, and I value clarity, structure, and thoughtful problem-solving in both creative and technical work.
             </p>
           </div>
+          
+          {/* Resume Link */}
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mt-6 text-slate-100 hover:text-blue-400 transition-colors group"
+          >
+            <span className="font-medium">View my resume</span>
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </a>
         </section>
 
         {/* Experience Section */}
-        <section id="experience" className="scroll-mt-16">
-          <h2 className="text-2xl font-bold text-slate-100 mb-6">
+        <section id="experience" className="scroll-mt-16 sm:scroll-mt-20">
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-100 mb-4 sm:mb-6">
             Experience
           </h2>
-          <div className="space-y-12">
+          <div className="space-y-8 sm:space-y-10 lg:space-y-12">
             {/* Software Engineer Intern */}
             <div className="group">
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-2">
-                <h3 className="text-lg font-semibold text-slate-100 group-hover:text-blue-400 transition-colors">
+                <h3 className="text-base sm:text-lg font-semibold text-slate-100 group-hover:text-blue-400 transition-colors">
                   Software Engineer Intern
                 </h3>
-                <span className="text-sm text-slate-400 whitespace-nowrap">
+                <span className="text-xs sm:text-sm text-slate-400 lg:whitespace-nowrap mt-1 lg:mt-0">
                   Dec 2024 – Feb 2025
                 </span>
               </div>
-              <p className="text-slate-400 mb-3">
+              <p className="text-sm sm:text-base text-slate-400 mb-3">
                 Bridge Marketplace · New York, USA (Remote)
               </p>
               <div className="flex flex-wrap gap-2 mb-3">
-                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">Python</span>
-                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">Dash</span>
-                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">Pandas</span>
-                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-xs">OCR</span>
-                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-xs">AI/ML Pipelines</span>
-                <span className="px-3 py-1 bg-green-900/30 text-green-300 rounded-full text-xs">Excel/CSV</span>
+                <span className="px-2 sm:px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">Python</span>
+                <span className="px-2 sm:px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">Dash</span>
+                <span className="px-2 sm:px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">Pandas</span>
+                <span className="px-2 sm:px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-xs">OCR</span>
+                <span className="px-2 sm:px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-xs">AI/ML Pipelines</span>
+                <span className="px-2 sm:px-3 py-1 bg-green-900/30 text-green-300 rounded-full text-xs">Excel/CSV</span>
               </div>
-              <ul className="text-slate-400 space-y-2 text-sm">
+              <ul className="text-slate-400 space-y-2 text-xs sm:text-sm">
                 <li>• Built a purchase order scorecard dashboard to analyse large Excel/CSV datasets and surface key financial metrics</li>
                 <li>• Developed Python data pipelines to clean, validate, and aggregate transactional data for AI-driven analysis</li>
                 <li>• Integrated OCR-based extraction to standardise data from variably formatted financial documents</li>
@@ -307,25 +300,25 @@ export default function Home() {
             {/* Freelance Full-Stack Developer */}
             <div className="group">
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-2">
-                <h3 className="text-lg font-semibold text-slate-100 group-hover:text-blue-400 transition-colors">
+                <h3 className="text-base sm:text-lg font-semibold text-slate-100 group-hover:text-blue-400 transition-colors">
                   Freelance Full-Stack Developer
                 </h3>
-                <span className="text-sm text-slate-400 whitespace-nowrap">
+                <span className="text-xs sm:text-sm text-slate-400 lg:whitespace-nowrap mt-1 lg:mt-0">
                   Mar 2025 – Present
                 </span>
               </div>
-              <p className="text-slate-400 mb-3">
+              <p className="text-sm sm:text-base text-slate-400 mb-3">
                 Self-Employed · Remote
               </p>
               <div className="flex flex-wrap gap-2 mb-3">
-                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">React</span>
-                <span className="px-3 py-1 bg-green-900/30 text-green-300 rounded-full text-xs">Node.js</span>
-                <span className="px-3 py-1 bg-green-900/30 text-green-300 rounded-full text-xs">REST APIs</span>
-                <span className="px-3 py-1 bg-green-900/30 text-green-300 rounded-full text-xs">Databases</span>
-                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-xs">Cloud Hosting</span>
-                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-xs">CI/CD</span>
+                <span className="px-2 sm:px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">React</span>
+                <span className="px-2 sm:px-3 py-1 bg-green-900/30 text-green-300 rounded-full text-xs">Node.js</span>
+                <span className="px-2 sm:px-3 py-1 bg-green-900/30 text-green-300 rounded-full text-xs">REST APIs</span>
+                <span className="px-2 sm:px-3 py-1 bg-green-900/30 text-green-300 rounded-full text-xs">Databases</span>
+                <span className="px-2 sm:px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-xs">Cloud Hosting</span>
+                <span className="px-2 sm:px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-xs">CI/CD</span>
               </div>
-              <ul className="text-slate-400 space-y-2 text-sm">
+              <ul className="text-slate-400 space-y-2 text-xs sm:text-sm">
                 <li>• Building end-to-end web applications from requirements to deployment</li>
                 <li>• Developing responsive UIs, backend APIs, and database-driven features</li>
                 <li>• Managing deployment workflows and basic CI/CD for production-ready delivery</li>
@@ -336,23 +329,23 @@ export default function Home() {
             {/* Software Developer */}
             <div className="group">
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-2">
-                <h3 className="text-lg font-semibold text-slate-100 group-hover:text-blue-400 transition-colors">
+                <h3 className="text-base sm:text-lg font-semibold text-slate-100 group-hover:text-blue-400 transition-colors">
                   Software Developer
                 </h3>
-                <span className="text-sm text-slate-400 whitespace-nowrap">
+                <span className="text-xs sm:text-sm text-slate-400 lg:whitespace-nowrap mt-1 lg:mt-0">
                   Apr 2024 – Dec 2024
                 </span>
               </div>
-              <p className="text-slate-400 mb-3">
+              <p className="text-sm sm:text-base text-slate-400 mb-3">
                 RISC Club at RMIT University · Melbourne, Australia
               </p>
               <div className="flex flex-wrap gap-2 mb-3">
-                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">JavaScript</span>
-                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">Web Technologies</span>
-                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-xs">Git</span>
-                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-xs">Internal Platforms</span>
+                <span className="px-2 sm:px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">JavaScript</span>
+                <span className="px-2 sm:px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">Web Technologies</span>
+                <span className="px-2 sm:px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-xs">Git</span>
+                <span className="px-2 sm:px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-xs">Internal Platforms</span>
               </div>
-              <ul className="text-slate-400 space-y-2 text-sm">
+              <ul className="text-slate-400 space-y-2 text-xs sm:text-sm">
                 <li>• Contributed to full-stack features for internal research and innovation platforms</li>
                 <li>• Collaborated with stakeholders to translate requirements into working software components</li>
                 <li>• Assisted with system integration and feature enhancements across research tools</li>
@@ -363,23 +356,23 @@ export default function Home() {
             {/* Computer Science Teacher */}
             <div className="group">
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-2">
-                <h3 className="text-lg font-semibold text-slate-100 group-hover:text-blue-400 transition-colors">
+                <h3 className="text-base sm:text-lg font-semibold text-slate-100 group-hover:text-blue-400 transition-colors">
                   Computer Science Teacher
                 </h3>
-                <span className="text-sm text-slate-400 whitespace-nowrap">
+                <span className="text-xs sm:text-sm text-slate-400 lg:whitespace-nowrap mt-1 lg:mt-0">
                   Jun 2022 – Nov 2022
                 </span>
               </div>
-              <p className="text-slate-400 mb-3">
+              <p className="text-sm sm:text-base text-slate-400 mb-3">
                 Vijaya School for Excellence · Amravati, India
               </p>
               <div className="flex flex-wrap gap-2 mb-3">
-                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">Python</span>
-                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">HTML</span>
-                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">CSS</span>
-                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">JavaScript</span>
+                <span className="px-2 sm:px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">Python</span>
+                <span className="px-2 sm:px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">HTML</span>
+                <span className="px-2 sm:px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">CSS</span>
+                <span className="px-2 sm:px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">JavaScript</span>
               </div>
-              <ul className="text-slate-400 space-y-2 text-sm">
+              <ul className="text-slate-400 space-y-2 text-xs sm:text-sm">
                 <li>• Delivered the Computer Science curriculum covering programming and web development fundamentals</li>
                 <li>• Planned lessons and created teaching materials aligned with curriculum goals</li>
                 <li>• Guided students through hands-on coding exercises and problem-solving</li>
@@ -390,11 +383,11 @@ export default function Home() {
         </section>
 
         {/* Skills Section */}
-        <section id="skills" className="scroll-mt-16">
-          <h2 className="text-2xl font-bold text-slate-100 mb-6">
+        <section id="skills" className="scroll-mt-16 sm:scroll-mt-20">
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-100 mb-4 sm:mb-6">
             Skills
           </h2>
-          <div className="space-y-6">
+          <div className="space-y-6 sm:space-y-8">
             {/* Frontend Development */}
             <div>
               <h3 className="text-lg font-semibold text-slate-100 mb-3">
@@ -438,7 +431,7 @@ export default function Home() {
                 {["MongoDB", "PostgreSQL", "SQL", "Schema Design", "CRUD Operations", "Data Validation"].map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 bg-emerald-900/30 text-emerald-300 rounded-full text-sm"
+                    className="px-3 py-1 bg-teal-900/30 text-teal-300 rounded-full text-sm"
                   >
                     {skill}
                   </span>
@@ -534,70 +527,108 @@ export default function Home() {
         </section>
 
         {/* Projects Section */}
-        <section id="projects" className="scroll-mt-16">
-          <h2 className="text-2xl font-bold text-slate-100 mb-6">
+        <section id="projects" className="scroll-mt-16 sm:scroll-mt-20">
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-100 mb-4 sm:mb-6">
             Projects
           </h2>
-          <div className="space-y-6">
+          <div className="space-y-8 sm:space-y-10 lg:space-y-12">
             <div className="group border border-slate-700 rounded-lg p-6 hover:border-blue-500 transition-colors">
               <h3 className="text-xl font-semibold text-slate-100 mb-2 group-hover:text-blue-400 transition-colors">
-                E-Commerce Platform
+                Purchase Order Scorecard Dashboard
               </h3>
               <p className="text-slate-400 mb-3">
-                A full-stack e-commerce solution with real-time inventory management, payment
-                integration, and admin dashboard. Built with Next.js, TypeScript, and Stripe.
+                The Purchase Order Scorecard Dashboard is an end-to-end analytics tool designed to process and analyse large volumes of purchase orders and invoices from Excel and CSV files. I built Python-based data pipelines using Pandas to clean, validate, and aggregate transactional data, and integrated OCR-driven extraction workflows to standardise fields from variably formatted financial documents for downstream AI-based analysis.
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
-                  Next.js
+                  Python
                 </span>
                 <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
-                  TypeScript
+                  Dash
                 </span>
                 <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
-                  Stripe
+                  Pandas
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  OCR Tools
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  Excel/CSV Processing
                 </span>
               </div>
             </div>
 
             <div className="group border border-slate-700 rounded-lg p-6 hover:border-blue-500 transition-colors">
               <h3 className="text-xl font-semibold text-slate-100 mb-2 group-hover:text-blue-400 transition-colors">
-                Task Management App
+                SHOME360 — Mixed Reality Training Platform
               </h3>
               <p className="text-slate-400 mb-3">
-                Collaborative task management application with real-time updates, team workspaces,
-                and advanced filtering. Features drag-and-drop interface and mobile responsiveness.
+                SHOME360 is a scalable mixed-reality training platform built to deliver interactive lab simulations and guided user workflows, combining immersive front-end environments with a modular backend architecture. I implemented RESTful CRUD APIs using Node.js and Express, integrated local MongoDB for persistent data storage, built file-upload pipelines for simulation assets, and managed backend services with PM2 to ensure stability, maintainability, and smooth deployment.
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
                   React
                 </span>
                 <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  Vite
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
                   Node.js
                 </span>
                 <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
-                  WebSocket
+                  Express
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  MongoDB
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  RESTful APIs
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  PM2
                 </span>
               </div>
             </div>
 
             <div className="group border border-slate-700 rounded-lg p-6 hover:border-blue-500 transition-colors">
               <h3 className="text-xl font-semibold text-slate-100 mb-2 group-hover:text-blue-400 transition-colors">
-                Portfolio Generator
+                Climate Data Analyser
               </h3>
               <p className="text-slate-400 mb-3">
-                SaaS platform for creating professional portfolio websites without coding.
-                Includes customizable themes, analytics dashboard, and SEO optimization.
+                The Climate Data Analyser is a data-driven web application that enables users to efficiently explore and filter over 260 years of Australian climate and population data. The platform uses relational databases to support fast querying across large historical datasets and presents insights through a clean, minimal interface designed to improve research efficiency and usability.
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
-                  Next.js
+                  Java
                 </span>
                 <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
-                  Tailwind
+                  HTML
                 </span>
                 <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
-                  PostgreSQL
+                  CSS
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  MySQL
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  SQLite
+                </span>
+              </div>
+            </div>
+
+            <div className="group border border-slate-700 rounded-lg p-6 hover:border-blue-500 transition-colors">
+              <h3 className="text-xl font-semibold text-slate-100 mb-2 group-hover:text-blue-400 transition-colors">
+                Customisable Maze Builder for Minecraft
+              </h3>
+              <p className="text-slate-400 mb-3">
+                The Customisable Maze Builder is a systems-level project that enables user-defined, scalable maze generation within Minecraft while preserving the surrounding environment. I implemented procedural maze-generation logic using C++ and Assembly, supporting randomised outputs within defined constraints and integrating mechanisms to cleanly remove generated structures and restore the original terrain.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  C++
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  Assembly
                 </span>
               </div>
             </div>
@@ -605,8 +636,8 @@ export default function Home() {
         </section>
 
         {/* Education Section */}
-        <section id="education" className="scroll-mt-16">
-          <h2 className="text-2xl font-bold text-slate-100 mb-6">
+        <section id="education" className="scroll-mt-16 sm:scroll-mt-20">
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-100 mb-4 sm:mb-6">
             Education
           </h2>
           <div className="space-y-8">
@@ -630,8 +661,8 @@ export default function Home() {
         </section>
 
         {/* Achievements Section */}
-        <section id="achievements" className="scroll-mt-16 pb-16">
-          <h2 className="text-2xl font-bold text-slate-100 mb-6">
+        <section id="achievements" className="scroll-mt-16 sm:scroll-mt-20 pb-12 sm:pb-16">
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-100 mb-4 sm:mb-6">
             Achievements
           </h2>
           <div className="space-y-4">
@@ -662,8 +693,8 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="pb-16 text-center">
-          <p className="text-sm text-slate-500">
+        <footer className="pb-8 sm:pb-12 lg:pb-16 text-center">
+          <p className="text-xs sm:text-sm text-slate-500">
             © Ranveer Deshmukh 2025
           </p>
         </footer>
