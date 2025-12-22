@@ -273,41 +273,118 @@ export default function Home() {
           <h2 className="text-2xl font-bold text-slate-100 mb-6">
             Experience
           </h2>
-          <div className="space-y-8">
+          <div className="space-y-12">
+            {/* Software Engineer Intern */}
             <div className="group">
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-2">
                 <h3 className="text-lg font-semibold text-slate-100 group-hover:text-blue-400 transition-colors">
-                  Senior Software Engineer
+                  Software Engineer Intern
                 </h3>
-                <span className="text-sm text-slate-400">
-                  2022 - Present
+                <span className="text-sm text-slate-400 whitespace-nowrap">
+                  Dec 2024 – Feb 2025
                 </span>
               </div>
-              <p className="text-slate-400 mb-2">
-                Tech Company Inc.
+              <p className="text-slate-400 mb-3">
+                Bridge Marketplace · New York, USA (Remote)
               </p>
-              <p className="text-slate-400">
-                Led development of scalable web applications using React, Next.js, and Node.js.
-                Improved application performance by 40% and mentored junior developers.
-              </p>
+              <div className="flex flex-wrap gap-2 mb-3">
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">Python</span>
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">Dash</span>
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">Pandas</span>
+                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-xs">OCR</span>
+                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-xs">AI/ML Pipelines</span>
+                <span className="px-3 py-1 bg-green-900/30 text-green-300 rounded-full text-xs">Excel/CSV</span>
+              </div>
+              <ul className="text-slate-400 space-y-2 text-sm">
+                <li>• Built a purchase order scorecard dashboard to analyse large Excel/CSV datasets and surface key financial metrics</li>
+                <li>• Developed Python data pipelines to clean, validate, and aggregate transactional data for AI-driven analysis</li>
+                <li>• Integrated OCR-based extraction to standardise data from variably formatted financial documents</li>
+                <li>• Supported an AI recommendation engine matching businesses with relevant lenders</li>
+                <li>• Worked remotely in an Agile workflow, owning feature delivery and demos</li>
+              </ul>
             </div>
 
+            {/* Freelance Full-Stack Developer */}
             <div className="group">
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-2">
                 <h3 className="text-lg font-semibold text-slate-100 group-hover:text-blue-400 transition-colors">
-                  Software Engineer
+                  Freelance Full-Stack Developer
                 </h3>
-                <span className="text-sm text-slate-400">
-                  2020 - 2022
+                <span className="text-sm text-slate-400 whitespace-nowrap">
+                  Mar 2025 – Present
                 </span>
               </div>
-              <p className="text-slate-400 mb-2">
-                Startup Solutions
+              <p className="text-slate-400 mb-3">
+                Self-Employed · Remote
               </p>
-              <p className="text-slate-400">
-                Developed and maintained multiple client projects using modern JavaScript frameworks.
-                Collaborated with cross-functional teams to deliver high-quality products.
+              <div className="flex flex-wrap gap-2 mb-3">
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">React</span>
+                <span className="px-3 py-1 bg-green-900/30 text-green-300 rounded-full text-xs">Node.js</span>
+                <span className="px-3 py-1 bg-green-900/30 text-green-300 rounded-full text-xs">REST APIs</span>
+                <span className="px-3 py-1 bg-green-900/30 text-green-300 rounded-full text-xs">Databases</span>
+                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-xs">Cloud Hosting</span>
+                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-xs">CI/CD</span>
+              </div>
+              <ul className="text-slate-400 space-y-2 text-sm">
+                <li>• Building end-to-end web applications from requirements to deployment</li>
+                <li>• Developing responsive UIs, backend APIs, and database-driven features</li>
+                <li>• Managing deployment workflows and basic CI/CD for production-ready delivery</li>
+                <li>• Working directly with clients to iterate on features and solutions</li>
+              </ul>
+            </div>
+
+            {/* Software Developer */}
+            <div className="group">
+              <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-2">
+                <h3 className="text-lg font-semibold text-slate-100 group-hover:text-blue-400 transition-colors">
+                  Software Developer
+                </h3>
+                <span className="text-sm text-slate-400 whitespace-nowrap">
+                  Apr 2024 – Dec 2024
+                </span>
+              </div>
+              <p className="text-slate-400 mb-3">
+                RISC Club at RMIT University · Melbourne, Australia
               </p>
+              <div className="flex flex-wrap gap-2 mb-3">
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">JavaScript</span>
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">Web Technologies</span>
+                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-xs">Git</span>
+                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-xs">Internal Platforms</span>
+              </div>
+              <ul className="text-slate-400 space-y-2 text-sm">
+                <li>• Contributed to full-stack features for internal research and innovation platforms</li>
+                <li>• Collaborated with stakeholders to translate requirements into working software components</li>
+                <li>• Assisted with system integration and feature enhancements across research tools</li>
+                <li>• Followed structured development practices including Git-based version control</li>
+              </ul>
+            </div>
+
+            {/* Computer Science Teacher */}
+            <div className="group">
+              <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-2">
+                <h3 className="text-lg font-semibold text-slate-100 group-hover:text-blue-400 transition-colors">
+                  Computer Science Teacher
+                </h3>
+                <span className="text-sm text-slate-400 whitespace-nowrap">
+                  Jun 2022 – Nov 2022
+                </span>
+              </div>
+              <p className="text-slate-400 mb-3">
+                Vijaya School for Excellence · Amravati, India
+              </p>
+              <div className="flex flex-wrap gap-2 mb-3">
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">Python</span>
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">HTML</span>
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">CSS</span>
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-xs">JavaScript</span>
+              </div>
+              <ul className="text-slate-400 space-y-2 text-sm">
+                <li>• Delivered the Computer Science curriculum covering programming and web development fundamentals</li>
+                <li>• Planned lessons and created teaching materials aligned with curriculum goals</li>
+                <li>• Guided students through hands-on coding exercises and problem-solving</li>
+                <li>• Evaluated assignments and provided constructive technical feedback</li>
+              </ul>
             </div>
           </div>
         </section>
@@ -448,32 +525,18 @@ export default function Home() {
             <div className="group">
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-2">
                 <h3 className="text-lg font-semibold text-slate-100 group-hover:text-blue-400 transition-colors">
-                  Bachelor of Science in Computer Science
+                  Bachelor of Computer Science
                 </h3>
-                <span className="text-sm text-slate-400">
-                  2016 - 2020
+                <span className="text-sm text-slate-400 whitespace-nowrap">
+                  Feb 2023 - Nov 2025
                 </span>
               </div>
               <p className="text-slate-400 mb-2">
-                University Name
+                Royal Melbourne Institute Of Technology, Melbourne
               </p>
               <p className="text-slate-400">
-                Focused on software engineering, algorithms, and data structures. 
-                Completed capstone project on machine learning applications.
+                Major: Cyber Security
               </p>
-            </div>
-
-            <div className="group">
-              <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-2">
-                <h3 className="text-lg font-semibold text-slate-100 group-hover:text-blue-400 transition-colors">
-                  Relevant Certifications
-                </h3>
-              </div>
-              <ul className="text-slate-400 space-y-2">
-                <li>• AWS Certified Developer - Associate</li>
-                <li>• Professional Scrum Master (PSM I)</li>
-                <li>• MongoDB Certified Developer</li>
-              </ul>
             </div>
           </div>
         </section>
