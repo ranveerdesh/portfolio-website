@@ -394,13 +394,14 @@ export default function Home() {
           <h2 className="text-2xl font-bold text-slate-100 mb-6">
             Skills
           </h2>
-          <div className="space-y-4">
+          <div className="space-y-6">
+            {/* Frontend Development */}
             <div>
               <h3 className="text-lg font-semibold text-slate-100 mb-3">
-                Frontend
+                Frontend Development
               </h3>
               <div className="flex flex-wrap gap-2">
-                {["React", "Next.js", "TypeScript", "Tailwind CSS", "JavaScript", "HTML", "CSS"].map((skill) => (
+                {["JavaScript (ES6+)", "TypeScript", "React", "Next.js", "HTML5", "CSS3", "Tailwind CSS", "Responsive Design", "Component-Based Architecture"].map((skill) => (
                   <span
                     key={skill}
                     className="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-sm"
@@ -411,12 +412,13 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Backend Development */}
             <div>
               <h3 className="text-lg font-semibold text-slate-100 mb-3">
-                Backend
+                Backend Development
               </h3>
               <div className="flex flex-wrap gap-2">
-                {["Node.js", "Express", "Python", "PostgreSQL", "MongoDB", "REST APIs"].map((skill) => (
+                {["Node.js", "Express.js", "RESTful APIs", "Authentication & Authorization", "API Design", "Middleware", "Server-side Rendering"].map((skill) => (
                   <span
                     key={skill}
                     className="px-3 py-1 bg-green-900/30 text-green-300 rounded-full text-sm"
@@ -427,15 +429,101 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Database & Data Management */}
             <div>
               <h3 className="text-lg font-semibold text-slate-100 mb-3">
-                Tools & Others
+                Database & Data Management
               </h3>
               <div className="flex flex-wrap gap-2">
-                {["Git", "Docker", "AWS", "Vercel", "CI/CD", "Agile"].map((skill) => (
+                {["MongoDB", "PostgreSQL", "SQL", "Schema Design", "CRUD Operations", "Data Validation"].map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1 bg-emerald-900/30 text-emerald-300 rounded-full text-sm"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Cloud & DevOps */}
+            <div>
+              <h3 className="text-lg font-semibold text-slate-100 mb-3">
+                Cloud & DevOps
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {["AWS (EC2, S3)", "Docker", "CI/CD", "GitHub Actions", "Cloud Deployment", "Environment Configuration", "Linux"].map((skill) => (
                   <span
                     key={skill}
                     className="px-3 py-1 bg-purple-900/30 text-purple-300 rounded-full text-sm"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Testing & Quality Assurance */}
+            <div>
+              <h3 className="text-lg font-semibold text-slate-100 mb-3">
+                Testing & Quality Assurance
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {["Unit Testing", "Integration Testing", "Jest", "Playwright", "Cypress", "Debugging", "Code Reviews"].map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1 bg-cyan-900/30 text-cyan-300 rounded-full text-sm"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Development Tools */}
+            <div>
+              <h3 className="text-lg font-semibold text-slate-100 mb-3">
+                Development Tools
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {["Git", "GitHub", "VS Code", "npm", "yarn", "ESLint", "Prettier"].map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1 bg-indigo-900/30 text-indigo-300 rounded-full text-sm"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Data Analytics & AI */}
+            <div>
+              <h3 className="text-lg font-semibold text-slate-100 mb-3">
+                Data Analytics & AI
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {["Python", "Pandas", "Data Cleaning & Transformation", "CSV / Excel Processing", "Dash", "OCR Integration", "AI-Assisted Data Pipelines"].map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1 bg-amber-900/30 text-amber-300 rounded-full text-sm"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Project Management */}
+            <div>
+              <h3 className="text-lg font-semibold text-slate-100 mb-3">
+                Project Management
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {["Agile / Scrum", "Jira", "Trello"].map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1 bg-pink-900/30 text-pink-300 rounded-full text-sm"
                   >
                     {skill}
                   </span>
@@ -551,10 +639,10 @@ export default function Home() {
               <div className="flex-shrink-0 w-2 h-2 mt-2 bg-blue-400 rounded-full"></div>
               <div>
                 <h3 className="text-lg font-semibold text-slate-100">
-                  Best Innovation Award 2023
+                  Participated in Indian International Team Trials for Pistol Shooting
                 </h3>
                 <p className="text-slate-400">
-                  Recognized for developing an AI-powered chatbot that improved customer satisfaction by 35%
+                  Delhi, India
                 </p>
               </div>
             </div>
@@ -563,34 +651,10 @@ export default function Home() {
               <div className="flex-shrink-0 w-2 h-2 mt-2 bg-blue-400 rounded-full"></div>
               <div>
                 <h3 className="text-lg font-semibold text-slate-100">
-                  Open Source Contributor
+                  National Level Pistol Shooting
                 </h3>
                 <p className="text-slate-400">
-                  Active contributor to popular open-source projects with 500+ stars combined
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-2 h-2 mt-2 bg-blue-400 rounded-full"></div>
-              <div>
-                <h3 className="text-lg font-semibold text-slate-100">
-                  AWS Certified Developer
-                </h3>
-                <p className="text-slate-400">
-                  Professional certification in AWS cloud development and architecture
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-2 h-2 mt-2 bg-blue-400 rounded-full"></div>
-              <div>
-                <h3 className="text-lg font-semibold text-slate-100">
-                  Hackathon Winner
-                </h3>
-                <p className="text-slate-400">
-                  First place at Regional Tech Hackathon 2022 for building an innovative healthcare solution
+                  Thiruvananthapuram, India
                 </p>
               </div>
             </div>
