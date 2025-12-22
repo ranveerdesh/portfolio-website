@@ -55,7 +55,3 @@ Edit `app/page.tsx` to customize the portfolio content with your own:
 - Projects
 - Achievements
 - Social media links
-
-## License
-
-MIT
