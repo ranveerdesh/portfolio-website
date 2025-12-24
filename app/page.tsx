@@ -274,7 +274,7 @@ export default function Home() {
                   Software Engineer Intern
                 </h3>
                 <span className="text-xs sm:text-sm text-slate-400 lg:whitespace-nowrap mt-1 lg:mt-0">
-                  Dec 2024 – Feb 2025
+                  Dec 2024 – Mar 2025
                 </span>
               </div>
               <p className="text-sm sm:text-base text-slate-400 mb-3">
