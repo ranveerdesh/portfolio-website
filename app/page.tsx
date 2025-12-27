@@ -251,7 +251,7 @@ export default function Home() {
           
           {/* Resume Link */}
           <a
-            href="/resume.pdf"
+            href="/Ranveer%20Deshmukh.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 mt-6 text-slate-100 hover:text-blue-400 transition-colors group"
