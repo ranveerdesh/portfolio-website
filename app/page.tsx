@@ -631,9 +631,16 @@ export default function Home() {
             </div>
 
             <div className="group border border-slate-700 rounded-lg p-6 hover:border-blue-500 transition-colors">
-              <h3 className="text-xl font-semibold text-slate-100 mb-2 group-hover:text-blue-400 transition-colors">
-                Customisable Maze Builder for Minecraft
-              </h3>
+              <a 
+                href="https://github.com/ranveerdesh/customizable-maze-builder" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <h3 className="text-xl font-semibold text-slate-100 mb-2 group-hover:text-blue-400 transition-colors">
+                  Customisable Maze Builder for Minecraft
+                </h3>
+              </a>
               <p className="text-slate-400 mb-3">
                 The Customisable Maze Builder is a systems-level project that enables user-defined, scalable maze generation within Minecraft while preserving the surrounding environment. I implemented procedural maze-generation logic using C++ and Assembly, supporting randomised outputs within defined constraints and integrating mechanisms to cleanly remove generated structures and restore the original terrain.
               </p>
