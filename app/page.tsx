@@ -559,9 +559,16 @@ export default function Home() {
             </div>
 
             <div className="group border border-slate-700 rounded-lg p-6 hover:border-blue-500 transition-colors">
-              <h3 className="text-xl font-semibold text-slate-100 mb-2 group-hover:text-blue-400 transition-colors">
-                SHOME360 — Mixed Reality Training Platform
-              </h3>
+              <a 
+                href="https://shome.hudini.online/login" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <h3 className="text-xl font-semibold text-slate-100 mb-2 group-hover:text-blue-400 transition-colors">
+                  SHOME360 — Mixed Reality Training Platform
+                </h3>
+              </a>
               <p className="text-slate-400 mb-3">
                 SHOME360 is a scalable mixed-reality training platform built to deliver interactive lab simulations and guided user workflows, combining immersive front-end environments with a modular backend architecture. I implemented RESTful CRUD APIs using Node.js and Express, integrated local MongoDB for persistent data storage, built file-upload pipelines for simulation assets, and managed backend services with PM2 to ensure stability, maintainability, and smooth deployment.
               </p>
@@ -591,9 +598,16 @@ export default function Home() {
             </div>
 
             <div className="group border border-slate-700 rounded-lg p-6 hover:border-blue-500 transition-colors">
-              <h3 className="text-xl font-semibold text-slate-100 mb-2 group-hover:text-blue-400 transition-colors">
-                Climate Data Analyser
-              </h3>
+              <a 
+                href="https://climate-data-analyzer.onrender.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <h3 className="text-xl font-semibold text-slate-100 mb-2 group-hover:text-blue-400 transition-colors">
+                  Climate Data Analyser
+                </h3>
+              </a>
               <p className="text-slate-400 mb-3">
                 The Climate Data Analyser is a data-driven web application that enables users to efficiently explore and filter over 260 years of Australian climate and population data. The platform uses relational databases to support fast querying across large historical datasets and presents insights through a clean, minimal interface designed to improve research efficiency and usability.
               </p>
