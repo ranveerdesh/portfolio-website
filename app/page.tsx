@@ -533,32 +533,6 @@ export default function Home() {
           </h2>
           <div className="space-y-8 sm:space-y-10 lg:space-y-12">
             <div className="group border border-slate-700 rounded-lg p-6 hover:border-blue-500 transition-colors">
-              <h3 className="text-xl font-semibold text-slate-100 mb-2 group-hover:text-blue-400 transition-colors">
-                Purchase Order Scorecard Dashboard
-              </h3>
-              <p className="text-slate-400 mb-3">
-                The Purchase Order Scorecard Dashboard is an end-to-end analytics tool designed to process and analyse large volumes of purchase orders and invoices from Excel and CSV files. I built Python-based data pipelines using Pandas to clean, validate, and aggregate transactional data, and integrated OCR-driven extraction workflows to standardise fields from variably formatted financial documents for downstream AI-based analysis.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
-                  Python
-                </span>
-                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
-                  Dash
-                </span>
-                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
-                  Pandas
-                </span>
-                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
-                  OCR Tools
-                </span>
-                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
-                  Excel/CSV Processing
-                </span>
-              </div>
-            </div>
-
-            <div className="group border border-slate-700 rounded-lg p-6 hover:border-blue-500 transition-colors">
               <a 
                 href="https://shome.hudini.online/login" 
                 target="_blank" 
@@ -593,6 +567,92 @@ export default function Home() {
                 </span>
                 <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
                   PM2
+                </span>
+              </div>
+            </div>
+
+            <div className="group border border-slate-700 rounded-lg p-6 hover:border-blue-500 transition-colors">
+              <a
+                href="https://doobdeck.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <h3 className="text-xl font-semibold text-slate-100 mb-2 group-hover:text-blue-400 transition-colors">
+                  Doobdeck
+                </h3>
+              </a>
+              <p className="text-slate-400 mb-3">
+                Doobdeck is designed for filmmakers as a personal directory for their production stills and references: upload and store your film stills, organize them into folders and searchable collections, and build curated “decks” for continuity, editing, or marketing. It automatically captures and preserves metadata, lets you tag and categorise images, and provides powerful search, filters, and grouping so you can find shots by tag, colour, folder, or other attributes. Use it as a portable reference library, a collaboration hub for teams, or a quick way to assemble visual decks for VFX, dailies, or promotional work.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  Next.js
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  React
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  TypeScript
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  Tailwind CSS
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  PostCSS
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  NextAuth.js
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  Postgres
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  Prisma
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  Cloudinary
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  Node.js
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  Docker
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  docker-compose
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  ESLint
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  Prettier
+                </span>
+              </div>
+            </div>
+
+            <div className="group border border-slate-700 rounded-lg p-6 hover:border-blue-500 transition-colors">
+              <h3 className="text-xl font-semibold text-slate-100 mb-2 group-hover:text-blue-400 transition-colors">
+                Purchase Order Scorecard Dashboard
+              </h3>
+              <p className="text-slate-400 mb-3">
+                The Purchase Order Scorecard Dashboard is an end-to-end analytics tool designed to process and analyse large volumes of purchase orders and invoices from Excel and CSV files. I built Python-based data pipelines using Pandas to clean, validate, and aggregate transactional data, and integrated OCR-driven extraction workflows to standardise fields from variably formatted financial documents for downstream AI-based analysis.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  Python
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  Dash
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  Pandas
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  OCR Tools
+                </span>
+                <span className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded">
+                  Excel/CSV Processing
                 </span>
               </div>
             </div>
