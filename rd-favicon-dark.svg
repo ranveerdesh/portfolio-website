@@ -1,0 +1,39 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title>RD Portfolio Favicon</title>
+  <desc>Minimal dark RD monogram favicon with navy background, white R and muted blue D arc.</desc>
+
+  <!-- Background -->
+  <circle cx="256" cy="256" r="232" fill="#07111E"/>
+
+  <!-- Subtle inner depth -->
+  <circle cx="256" cy="256" r="232" fill="url(#bgGradient)" opacity="0.65"/>
+
+  <!-- D arc -->
+  <path d="M302 145
+           C384 161 432 225 432 256
+           C432 353 366 400 286 400
+           L286 361
+           C345 361 386 321 386 256
+           C386 196 350 158 302 145Z"
+        fill="#385D8A"/>
+
+  <!-- R monogram -->
+  <path d="M122 112H254
+           C321 112 360 148 360 203
+           C360 248 334 278 292 288
+           L363 400H300
+           L235 294H177V400H122V112ZM177 160V248H249
+           C284 248 304 232 304 204
+           C304 176 284 160 249 160H177Z"
+        fill="#F5F7FA"/>
+
+  <!-- Small cut to keep the D feel visible behind the R -->
+  <path d="M286 360H326V400H286V360Z" fill="#385D8A"/>
+
+  <defs>
+    <radialGradient id="bgGradient" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(256 210) rotate(90) scale(280)">
+      <stop stop-color="#132235"/>
+      <stop offset="1" stop-color="#03070D"/>
+    </radialGradient>
+  </defs>
+</svg>
